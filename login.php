@@ -41,7 +41,7 @@ include ('connect.php');
 					$_SESSION['user']=$row[1];
 					$_SESSION['email']=$row[3];
 					$name=$row[1];
-					$URL="home_page/home.php";  //successful login.. directing to home.php
+					$URL="home.php";  //successful login.. directing to home.php
 					header ("Location: $URL"); 
 					exit; 
 					}
@@ -50,5 +50,5 @@ include ('connect.php');
 		}
 	} else { $msg= "Please input a valid email and try again.<br>";}
 	mysqli_close($DBConnect);	
-	header('Location: form.php?beta='.$msg);
+	header('Location: index.html?beta='.$msg);
 ?>
